@@ -2,7 +2,7 @@
 
 ## The decision
 
-Whether RocketShip builds Automated Prioritization in Juno as a Hybrid (RAG + Agentic) Copilot, vs buying a generic LLM API or fine-tuning a model on our corpus.
+Whether RocketShip builds Automated Prioritization in Juno as a Hybrid (RAG + agentic reasoning) Copilot, vs buying a generic LLM API or fine-tuning a model on our corpus.
 
 Why now: roadmap discussions are driven by the loudest voice in Teams Channels rather than customer evidence. Priorities reverse weekly, and the PM cannot defend the call to leadership.
 
