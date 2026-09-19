@@ -1,6 +1,6 @@
 # Juno PM — AI Copilot for RocketShip’s Product Org
 
-> An AI Associate PM that turns Teams Channels/Confluence/Jira chaos into a prioritised top-3 risk list every morning.
+> An AI Associate PM that turns Team Channels/Confluence/Jira chaos into a prioritised top-3 risk list every morning.
 
 _Sadaf Naseri · AI PM Cohort · Sep 2026_
 
@@ -18,22 +18,22 @@ This repo is my final project for the AI Product Management Certification — **
 
 ### M2 · Strategy
 - **Decision matrix** — [`02-strategy/decision-matrix.md`](02-strategy/decision-matrix.md)
-- **AI Strategy one-pager** — [`strategy-one-pager.md`](strategy-one-pager.md)
+- **AI Strategy one-pager** — [`02-strategy/strategy-one-pager.md`](02-strategy/strategy-one-pager.md)
 
 ### M3 · RAG / AI PRD
-- **AI PRD** — [`prd.md`](prd.md)
+- **AI PRD** — [`03-harness-prd/prd.md`](03-harness-prd/prd.md)
 
 ### M4 · AI-Native UX
-- **AI user flow** — [`user-flow.md`](user-flow.md)
-- **Trust-gap mitigations** — [`trust-gaps.md`](trust-gaps.md)
+- **AI user flow** — [`04-ai-ux/user-flow.md`](04-ai-ux/user-flow.md)
+- **Trust-gap mitigations** — [`04-ai-ux/trust-gaps.md`](04-ai-ux/trust-gaps.md)
 
 ### M5 · Agentic Workflows
-- **Agent Workflow Spec (AWSpec)** — [`awspec.md`](awspec.md)
-- **Agent Control Panel** — [`agent-control-panel.md`](agent-control-panel.md)
+- **Agent Workflow Spec (AWSpec)** — [`05-agentic-workflows/awspec.md`](05-agentic-workflows/awspec.md)
+- **Agent Control Panel** — [`05-agentic-workflows/agent-control-panel.md`](05-agentic-workflows/agent-control-panel.md)
 
 ### M6 · Evals &amp; Guardrails
-- **Eval stack** — [`eval-stack.md`](eval-stack.md)
-- **Human evaluation rubric** — [`human-rubric.md`](human-rubric.md)
+- **Eval stack** — [`06-evals/eval-stack.md`](06-evals/eval-stack.md)
+- **Human evaluation rubric** — [`06-evals/human-rubric.md`](06-evals/human-rubric.md)
 
 ---
 
