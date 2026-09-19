@@ -10,9 +10,9 @@ RocketShip PMs need evidence-based prioritisation. Juno reads the strategy and t
 
 | Surface | Specification |
 |---|---|
-| 01 Context | Required: RocketShip Strategy One-Pager (the M2 deliverable, the single authority) + Service Now tickets tagged P0/P1 from the last 90 days… |
+| 01 Context | Required: RocketShip Strategy One-Pager (the M2 deliverable, the single authority) + Jira tickets tagged P0/P1 from the last 90 days… |
 | 02 Tools | search_strategy(query) - READ read_tickets(filter) - READ draft_priority(insight_id, priority, rationale) - DRAFT write_roadmap(insight_id,… |
-| 03 Loop | Ceiling of 5 tool turns per prioritisation request. On turn 5, return the best current ranking labelled "turn limit reached" rather than… |
+| 03 Loop | Ceiling of 5 tool turns per prioritization request. On turn 5, return the best current ranking labelled "turn limit reached" rather than… |
 | 04 Memory | Per PM, per sprint. Juno remembers the rationale behind each ranking it produced this sprint, so it can explain a change rather than… |
 | 05 Permissions | read auto · draft auto · write confirm · send blocked |
 | 06 Verification | Every priority must cite at least one clause that appears verbatim in the strategy document loaded this session. |
@@ -21,7 +21,7 @@ RocketShip PMs need evidence-based prioritisation. Juno reads the strategy and t
 
 **Required sources, and exclusions**
 
-Required: RocketShip Strategy One-Pager (the M2 deliverable, the single authority) + Service Now tickets tagged P0/P1 from the last 90 days + Teams Channel #voice-of-customer from the last 90 days.
+Required: RocketShip Strategy One-Pager (the M2 deliverable, the single authority) + Jira tickets tagged P0/P1 from the last 90 days + Teams Channel #voice-of-customer from the last 90 days.
 
 Excluded: Salesforce closed-lost notes and exec Teams Chats. Both are opinion-heavy and would let Juno rank on seniority rather than evidence. Named here so the exclusion is a decision on the record, not an oversight.
 
@@ -44,19 +44,19 @@ write_roadmap(insight_id, priority) - WRITE
 
 No notify_stakeholder() or post_to_teams(). Both are class SEND. A wrong priority in a draft costs a PM two minutes of reading. The same wrong priority broadcast to #product costs a week of politics, and you cannot unsend it.
 
-No delete_ticket() or close_ticket(). Destructive, and nothing about prioritisation requires it.
+No delete_ticket() or close_ticket(). Destructive, and nothing about prioritization requires it.
 
 ## 03 Loop · AI Costs & Latency
 
 **Turn ceiling and escalation**
 
-Ceiling of 5 tool turns per prioritisation request. On turn 5, return the best current ranking labelled "turn limit reached" rather than truncating silently.
+Ceiling of 5 tool turns per prioritization request. On turn 5, return the best current ranking labelled "turn limit reached" rather than truncating silently.
 
 Escalate to the PM after 3 consecutive failed tool calls, and immediately if two retrieved strategy clauses contradict each other. A contradiction in the strategy is a signal for a human, not a tiebreak for Juno.
 
 **Latency and cost target**
 
-p95 under 8 seconds from Process click to ranked draft. Cost ceiling $0.12 per run.
+p95 under 5 seconds from Process click to ranked draft. Cost ceiling $0.12 per run.
 
 At roughly 40 runs per PM per month across 12 PMs, that is about $58 a month. Small enough that the turn ceiling is really a latency decision, not a cost one, and worth saying so out loud so nobody optimizes the wrong number.
 
