@@ -59,7 +59,7 @@ This repo is my final project for the AI Product Management Certification — **
 - <90% golden-set accuracy on automated layer.
 - Customer-name fabrication in last 30 days.
 - Cost >$0.50 per run.
-- P99 latency >5s on triage flow.
+- P95 latency >8s on triage flow.
 
 ### Governance
 - Compliance: PII scrubber pre-LLM; GDPR DSR handler in /docs/dsr-runbook.md.
