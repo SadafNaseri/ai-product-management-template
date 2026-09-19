@@ -46,7 +46,7 @@ This repo is my final project for the AI Product Management Certification — **
 - Human rubric drafted; 2 grader candidates lined up; no calibration round yet.
 
 ### What ships next (next 2 sprints)
-- Sprint 1: wire the eval harness to CI; staff and calibrate 2 graders; ship the Team Channel triage tool.
+- Sprint 1: wire the eval harness to CI; staff and calibrate 2 graders; ship the Teams Channel triage tool.
 - Sprint 2: open closed beta with 3 PMs (1 RocketShip, 2 customers); weekly rubric review; instrument abandon-rate.
 
 ### What I watch (dashboards)
