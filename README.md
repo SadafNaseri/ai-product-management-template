@@ -1,6 +1,6 @@
 # Juno PM — AI Copilot for RocketShip’s Product Org
 
-> An AI Associate PM that turns Team Channels/Confluence/Jira chaos into a prioritised top-3 risk list every morning.
+> An AI Associate PM that turns Teams Channels/Confluence/Jira chaos into a prioritised top-3 risk list every morning.
 
 _Sadaf Naseri · AI PM Cohort · Sep 2026_
 
