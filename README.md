@@ -58,7 +58,7 @@ This repo is my final project for the AI Product Management Certification — **
 - Any critical-safety fail (any "1" on safety dimension in human eval).
 - <90% golden-set accuracy on automated layer.
 - Customer-name fabrication in last 30 days.
-- Cost >$0.50 per run.
+- Cost >$0.50 per run (hard ceiling; operating target $0.12/run per M3).
 - P95 latency >8s on triage flow.
 
 ### Governance
