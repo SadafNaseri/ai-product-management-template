@@ -1,21 +1,15 @@
-# Lovable Prototype · Juno
-
-> Module 1 · Prompting. The clickable Lovable prototype that brings the system prompt to life.
+# Prototype · Juno
 
 ## Prototype link
 
-_https://sn-rocketship-insight-flow.lovable.app_
-
-_____
+https://sn-rocketship-insight-flow.lovable.app
 
 ## What it demonstrates
 
-_The one flow this prototype proves._
-
-_____
+Can take details and break out the results on the right hand side for the demo text.
 
 ## Debrief
 
-- **What worked:** _____
-- **What broke / felt like a toy:** _____
-- **What I'd change next pass:** _____
+- **What worked:** First default test works but it is not able to process the second example.
+- **What broke / felt like a toy:** The button was ignoring my text and always showing the same pre-written demo content. Needed to fix the script so that it actually analyses whatever I paste.
+- **What I'd change next pass:** Will add to the prompt that when any new input is pasted and hit Process Transcript the tab must process the new text and show the results within few seconds.
