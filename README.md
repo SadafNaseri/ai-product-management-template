@@ -65,7 +65,7 @@ This repo is my final project for the AI Product Management Certification — **
 - Compliance: PII scrubber pre-LLM; GDPR DSR handler in /docs/dsr-runbook.md.
 - Safety: prompt-injection eval row in golden set; refusal on legal/contract content.
 - Reliability: 99.5% SLO; cached top-3 fallback if model is down.
-- Reputation: 2-hour incident-response playbook in /docs; canary deploys for every model swap.
+- Reputation: 2-hour incident-response playbook in /docs/incident-response-playbook.md; canary deploys for every model swap.
 
 ---
 
