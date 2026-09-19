@@ -13,27 +13,27 @@ This repo is my final project for the AI Product Management Certification — **
 ## Module artefacts
 
 ### M1 · Prompting
-- **System prompt** — [`01-prompting/system-prompt.md`](01-prompting/system-prompt.md)
+- **System prompt** — [`https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/01-prompting/system-prompt.md`](https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/01-prompting/system-prompt.md)
 - **Prototype** — https://sn-rocketship-insight-flow.lovable.app
 
 ### M2 · Strategy
-- **Decision matrix** — [`02-strategy/decision-matrix.md`](02-strategy/decision-matrix.md)
-- **AI Strategy one-pager** — [`02-strategy/strategy-one-pager.md`](02-strategy/strategy-one-pager.md)
+- **Decision matrix** — [`https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/02-strategy/decision-matrix.md`](https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/02-strategy/decision-matrix.md)
+- **AI Strategy one-pager** — [`https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/02-strategy/strategy-one-pager.md`](https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/02-strategy/strategy-one-pager.md)
 
 ### M3 · RAG / AI PRD
-- **AI PRD** — [`03-harness-prd/prd.md`](03-harness-prd/prd.md)
+- **AI PRD** — [`https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/03-rag-prd/prd.md`](https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/03-rag-prd/prd.md)
 
 ### M4 · AI-Native UX
-- **AI user flow** — [`04-ai-ux/user-flow.md`](04-ai-ux/user-flow.md)
-- **Trust-gap mitigations** — [`04-ai-ux/trust-gaps.md`](04-ai-ux/trust-gaps.md)
+- **AI user flow** — [`https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/04-ai-ux/user-flow.md`](https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/04-ai-ux/user-flow.md)
+- **Trust-gap mitigations** — [`https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/04-ai-ux/trust-gaps.md`](https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/04-ai-ux/trust-gaps.md)
 
 ### M5 · Agentic Workflows
-- **Agent Workflow Spec (AWSpec)** — [`05-agentic-workflows/awspec.md`](05-agentic-workflows/awspec.md)
-- **Agent Control Panel** — [`05-agentic-workflows/agent-control-panel.md`](05-agentic-workflows/agent-control-panel.md)
+- **Agent Workflow Spec (AWSpec)** — [`https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/05-agentic-workflows/awspec.md`](https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/05-agentic-workflows/awspec.md)
+- **Agent Control Panel** — [`https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/05-agentic-workflows/agent-control-panel.md`](https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/05-agentic-workflows/agent-control-panel.md)
 
 ### M6 · Evals &amp; Guardrails
-- **Eval stack** — [`06-evals/eval-stack.md`](06-evals/eval-stack.md)
-- **Human evaluation rubric** — [`06-evals/human-rubric.md`](06-evals/human-rubric.md)
+- **Eval stack** — [`https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/06-evals/eval-stack.md`](https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/06-evals/eval-stack.md)
+- **Human evaluation rubric** — [`https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/06-evals/human-rubric.md`](https://github.com/SadafNaseri/ai-product-management-template/blob/b78f75e6b4e502e08cb585ca03ee30992a38ee29/06-evals/human-rubric.md)
 
 ---
 
