@@ -22,7 +22,7 @@ New message in #escalations tagged P0 AND thread length >= 5 messages within 10 
 | 2 | RAG retrieval over the RocketShip Strategy One-Pager (M3 KB), top-K = 6. | corpus.retrieve(query, k=6), read-only |  |
 | 3 | Score risk + alignment vs strategic pillars; emit P0-P3 with rationale. | salesforce.lookup_arr(customer_id), read-only |  |
 | 4 | Draft summary card (transcript quote + strategic citation). | jira.create_stub(payload), write, requires confidence >= 80% |  |
-| 5 | Post to #pm-daily OR route to PM review based on confidence threshold. | teams.post(channel, payload), write, restricted to #pm-daily |  |
+| 5 | Draft the top-3 for PM approval, routed by confidence tier (see thresholds below). Nothing posts without PM approval. | teams.post(channel, payload), write, restricted to #pm-daily |  |
 
 **Schemas**
 
@@ -39,7 +39,12 @@ New message in #escalations tagged P0 AND thread length >= 5 messages within 10 
 
 ## Human-in-the-loop
 
-PM reviews any P0 with confidence < 70% before posting. Daily 8:45am: PM has a 15-min review window before the agent auto-posts to #pm-daily.
+PM reviews any P0 with confidence < 70% before posting. Daily 8:45am: Juno posts the drafted top-3 to the review panel; the PM approves (or edits) before it publishes to #pm-daily. No auto-publish.
+
+Confidence routing (matches Agent Control Panel):
+- >= 80% (high): draft to #pm-daily review panel; PM one-click approve.
+- 70-79% (mid): route to #pm-juno-review, tag @on-call-pm; PM edits and approves.
+- < 70% (low): hold for PM; reasoning trace only, no ranked post.
 
 ## Success & failure
 
@@ -47,7 +52,7 @@ PM reviews any P0 with confidence < 70% before posting. Daily 8:45am: PM has a 1
 - Failure: > 2 tool errors in a run → log + abort.
 - Escalation: confidence < 70% on any P0 → hand to PM.
 - Timeout: 90s wall clock → abort with partial output.
-- **Fails safe when:** Agent can READ Teams Channel #escalations + Strategy KB + Salesforce ARR. Agent can WRITE to #pm-daily and create Jira stubs. Agent CANNOT edit Salesforce records, edit Jira tickets after creation, or post outside #pm-daily.
+- **Fails safe when:** On abort (tool errors, timeout, or contradictory sources), Juno emits partial output clearly labelled "incomplete", posts nothing, and hands the thread to the PM with the full trace.
 
 ## Self-review
 
