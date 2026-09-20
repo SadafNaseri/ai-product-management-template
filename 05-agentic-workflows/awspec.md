@@ -18,10 +18,10 @@ New message in #escalations tagged P0 AND thread length >= 5 messages within 10 
 
 | Step | Action | Tool / model | Guardrail |
 |---|---|---|---|
-| 1 | Read the thread + retrieve customer ID and ARR if mentioned. | teams.read_thread(id), read-only | Agent can READ Teams Channel #escalations + Strategy KB + Salesforce ARR. Agent can WRITE to #pm-daily and create Jira stubs. Agent CANNOT edit Salesforce records, edit Jira tickets after creation, or post outside #pm-daily. |
+| 1 | Read the thread + retrieve customer ID and ARR if mentioned. | teams.read_thread(id), read-only | Agent can READ Teams Channel #escalations + Strategy KB + Salesforce ARR. Agent can DRAFT to #pm-daily and #pm-juno-review and create Jira stubs; publishing to any channel requires PM approval. Agent CANNOT edit Salesforce records, edit Jira tickets after creation, publish without PM approval, or post to any channel other than #pm-daily and #pm-juno-review. |
 | 2 | RAG retrieval over the RocketShip Strategy One-Pager (M3 KB), top-K = 6. | corpus.retrieve(query, k=6), read-only |  |
 | 3 | Score risk + alignment vs strategic pillars; emit P0-P3 with rationale. | salesforce.lookup_arr(customer_id), read-only |  |
-| 4 | Draft summary card (transcript quote + strategic citation). | jira.create_stub(payload), write, requires confidence >= 80% |  |
+| 4 | Draft summary card (transcript quote + strategic citation). | jira.create_stub(payload), write, requires confidence >= 80% AND PM confirmation (per M3 write=confirm). |  |
 | 5 | Draft the top-3 for PM approval, routed by confidence tier (see thresholds below). Nothing posts without PM approval. | teams.post(channel, payload), write, restricted to #pm-daily |  |
 
 **Schemas**
@@ -35,7 +35,7 @@ New message in #escalations tagged P0 AND thread length >= 5 messages within 10 
 - **Episodic:** In-scope, tool results, retrieved chunks, intermediate scores. Lifetime: end of run.
 - **Semantic:** In-scope, RocketShip strategic taxonomy + Juno system prompt + PM preferences. Lifetime: indefinite, refreshed weekly. Out of scope, do NOT persist customer-specific contracts or PII.
 - **Working:** In-scope, current thread, customer ID, ARR, retrieved KB chunks, current confidence score. Held in working context only.
-- **External:** Teams Channel API (read), RocketShip Strategy KB (read), Salesforce ARR lookup (read), #pm-daily channel (write), Jira (write, stub creation only).
+- **External:** Teams Channel API (read), RocketShip Strategy KB (read), Salesforce ARR lookup (read), #pm-daily and #pm-juno-review channels (write, draft only, publish requires PM approval), Jira (write, stub creation only).
 
 ## Human-in-the-loop
 
@@ -48,7 +48,7 @@ Confidence routing (matches Agent Control Panel):
 
 ## Success & failure
 
-- **Done when:** - Success: top-3 risk list posted to #pm-daily.
+- **Done when:** - Success: top-3 risk list posted to #pm-daily after PM approval.
 - Failure: > 2 tool errors in a run → log + abort.
 - Escalation: confidence < 70% on any P0 → hand to PM.
 - Timeout: 90s wall clock → abort with partial output.
