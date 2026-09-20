@@ -14,13 +14,15 @@ A new P0 customer transcript is uploaded to the "Raw Input" column in Juno (the 
 
 ## The flow
 
-1. 1. RAG retrieval over the RocketShip Strategy One-Pager (M3 KB), top-K = 6.
-2. Comparison logic, does the transcript pain point map to a strategic pillar?
-3. Risk + alignment scoring, emit P0-P3 with a strategic-rationale citation.
-4. Confidence check, score < 30 → notRecommended; score ≥ 70 → P0/P1.
-2. "Scanning Strategy One-Pager…" → "Cross-referencing 1 transcript with 4 strategic pillars…" → "Synthesising priorities + drafting PRD section…"
-3. Path A (Strategy loaded) → grounded prioritization with citations.
-Path B (Strategy missing) → "Cautious mode", generic priorities tagged "low confidence" + nudge to load the strategy doc.
+1. **Pipeline** (runs automatically on the new transcript):
+   1. RAG retrieval over the RocketShip Strategy One-Pager (M3 KB), top-K = 6.
+   2. Comparison logic: does the transcript pain point map to a strategic pillar?
+   3. Risk + alignment scoring: emit P0-P3 with a strategic-rationale citation.
+   4. Severity check (0-100 risk score): < 30 → notRecommended; 30-69 → P2/P3; ≥ 70 → P0/P1. This is risk severity, separate from Juno's posting-confidence threshold in the Agent Control Panel.
+2. **Breadcrumb messages** while it works: "Scanning Strategy One-Pager…" → "Cross-referencing 1 transcript with 4 strategic pillars…" → "Synthesising priorities + drafting PRD section…"
+3. **Branching**:
+   - Path A (Strategy loaded) → grounded prioritization with citations.
+   - Path B (Strategy missing) → "Cautious mode": generic priorities tagged "low confidence" + nudge to load the strategy doc.
 
 ## AI moments
 
