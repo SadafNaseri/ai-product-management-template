@@ -40,19 +40,19 @@ This repo is my final project for the AI Product Management Certification — **
 ## PM Execution Plan
 
 ### Where Juno is today
-- M1–M6 specced and committed.
-- The prototype validates the M1 flow with the team.
+- All six modules specced, committed, and now internally consistent: one autonomy stance (Copilot, no auto-publish), one confidence-tier definition, and red lines that map to real gates.
+- Prototype validates the RAG + tool-trace flow with the team; every priority is grounded and shows its audit trail.
 - Automated evals: golden-set schema and format defined in 06-evals/golden-set/ with representative samples; curation toward the 200-item target in progress; judge prompt validated against 30 items; not yet wired to CI.
-- Human rubric drafted; 2 grader candidates lined up; no calibration round yet.
+- Human rubric drafted; 2 graders lined up; no live calibration round yet.
 
 ### What ships next (next 2 sprints)
-- Sprint 1: wire the eval harness to CI; staff and calibrate 2 graders; ship the Teams Channel triage tool.
-- Sprint 2: open closed beta with 3 PMs (1 RocketShip, 2 customers); weekly rubric review; instrument abandon-rate.
+- Sprint 1: attack the named bottleneck. Tighten retrieval/chunking and the verbatim-citation gate against the golden set; wire the eval harness to CI; run the first grader calibration round.
+- Sprint 2: closed beta with 3 PMs (1 RocketShip, 2 customers); instrument the strategy outcome metrics below; weekly rubric review.
 
 ### What I watch (dashboards)
-- Daily: thumbs-down rate, regen rate, hand-off rate.
-- Weekly: human-rubric mean per dimension; refusal hit-rate; cost per run.
-- Per release: golden-set accuracy; format/citation/refusal pass rate.
+- Strategy outcomes (the M2 targets): weekly prioritization cycle time (target 2h -> 30min); decision-reversal rate within 1 week (target < 10%); share of priorities with 2+ cited sources (target 90%+).
+- Product health (daily): thumbs-down rate, regen rate, hand-off rate.
+- Eval health (per release): golden-set accuracy; format/citation/refusal pass rate; cost per run.
 
 ### Red lines (what blocks shipping)
 - Any critical-safety fail (any "1" on safety dimension in human eval).
@@ -71,9 +71,10 @@ This repo is my final project for the AI Product Management Certification — **
 
 ## Build Insights
 
-- **Friction point.** Retrieval quality was the bottleneck — chunking strategy mattered more than the model.
-- **Key learning.** Eval rubrics force the product decisions that PRDs let you hide.
-- **Aha moment.** The system prompt is the product — the UI is the wrapper.
+- **Friction point.** Grounding is only as trustworthy as retrieval. A confident priority built on a weak chunk still reads as authoritative, which makes it the most dangerous failure mode, so chunking strategy and the verbatim-citation gate mattered more than the choice of model.
+- **Key learning.** Autonomy is a strategy decision, not an engineering one. "Copilot" was declared in M2, but the agent spec had quietly drifted to auto-publish by M5. A single wrong auto-post would have burned the leadership trust the whole product depends on, so holding every module to draft-then-approve is what keeps the promise credible.
+- **Aha moment.** A red line is theatre until it is a gate. The cost, latency, and safety limits only became real once each one mapped to an enforcement point in the eval stack and the control panel. A stated limit with no enforcement hook is just a wish.
+- **The system prompt is the product.** The UI is the wrapper; the behavior lives in the prompt and the guardrails around it.
 
 ---
 
