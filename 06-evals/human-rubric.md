@@ -62,7 +62,7 @@ _Full 1-5 anchors:_
 
 ## Calibration
 
-- **Sampling rule:** 50 P0 runs/week, stratified by confidence (high/mid/low). 100% of hand-off cases included.
+- **Sampling rule:** 50 P0 runs/week, stratified by confidence (high >= 80%, mid 70-79%, low < 70%). 100% of hand-off cases included.
 - **Cadence:** Weekly batch (Friday afternoon)
 - **Graders per item:** 2 graders + PM tiebreak per item
 - **Calibration cadence:** Re-calibrate quarterly + on rubric drift signal (disagreement >=15%)
