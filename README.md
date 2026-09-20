@@ -42,7 +42,7 @@ This repo is my final project for the AI Product Management Certification — **
 ### Where Juno is today
 - M1–M6 specced and committed.
 - The prototype validates the M1 flow with the team.
-- Automated evals: 200-item golden set drafted, judge prompt validated against 30 items; not yet wired to CI.
+- Automated evals: golden-set schema and format defined in 06-evals/golden-set/ with representative samples; curation toward the 200-item target in progress; judge prompt validated against 30 items; not yet wired to CI.
 - Human rubric drafted; 2 grader candidates lined up; no calibration round yet.
 
 ### What ships next (next 2 sprints)
