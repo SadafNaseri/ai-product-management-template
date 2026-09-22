@@ -74,7 +74,7 @@ This repo is my final project for the AI Product Management Certification — **
 - **Friction point.** Grounding is only as trustworthy as retrieval. A confident priority built on a weak chunk still reads as authoritative, which makes it the most dangerous failure mode, so chunking strategy and the verbatim-citation gate mattered more than the choice of model.
 - **Key learning.** Autonomy is a strategy decision, not an engineering one. "Copilot" was declared in M2, but the agent spec had quietly drifted to auto-publish by M5. A single wrong auto-post would have burned the leadership trust the whole product depends on, so holding every module to draft-then-approve is what keeps the promise credible.
 - **Aha moment.** A red line is theatre until it is a gate. The cost, latency, and safety limits only became real once each one mapped to an enforcement point in the eval stack and the control panel. A stated limit with no enforcement hook is just a wish.
-- **The system prompt is the product.** The UI is the wrapper; the behavior lives in the prompt and the guardrails around it.
+
 
 ---
 
