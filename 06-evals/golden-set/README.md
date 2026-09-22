@@ -7,7 +7,7 @@ Anonymised P0 escalation threads paired with the PM-curated "correct" top-3 risk
 
 ## Status
 - Target size: 200 anonymised P0 threads.
-- Current: <SET TO YOUR REAL COUNT> curated; judge prompt validated against 30 items.
+- Current: 2 curated sample entries; judge prompt drafted, full validation pending against the curated set.
 - Representative format samples live in `sample-entries.jsonl`.
 
 ## Entry schema (one JSON object per line, JSONL)
