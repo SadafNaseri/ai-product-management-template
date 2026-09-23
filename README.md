@@ -42,7 +42,7 @@ This repo is my final project for the AI Product Management Certification — **
 ### Where Juno is today
 - All six modules specced, committed, and now internally consistent: one autonomy stance (Copilot, no auto-publish), one confidence-tier definition, and red lines that map to real gates.
 - Prototype validates the RAG + tool-trace flow with the team; every priority is grounded and shows its audit trail.
-- Automated evals: golden-set schema and format defined in 06-evals/golden-set/ with representative samples; curation toward the 200-item target in progress; judge prompt validated against 30 items; not yet wired to CI.
+- Automated evals: golden-set schema and format defined in 06-evals/golden-set/ with representative samples; curation toward the 200-item target in progress; judge prompt drafted, validation pending against the curated set; not yet wired to CI.
 - Human rubric drafted; 2 graders lined up; no live calibration round yet.
 
 ### What ships next (next 2 sprints)
